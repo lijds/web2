@@ -1,0 +1,28 @@
+{
+  "python": {
+    "title": "Python Development",
+    "instructor": "Jane Smith",
+    "tagline": "Learn Python from zero to professional",
+    "description": "Complete Python course covering syntax, OOP, frameworks and real projects.",
+    "image": "images/courses/python.jpg"
+  },
+  "frontend": {
+    "title": "Frontend Development",
+    "tagline": "HTML, CSS, JavaScript from basics to advanced",
+    "description": "Build responsive websites using HTML, CSS, JS and modern tools.",
+    "image": "images/courses/frontend.jpg"
+  },
+  "design": {
+    "title": "UI/UX Design",
+    "tagline": "Learn user-centered design",
+    "description": "Master Figma, layout principles and usability techniques.",
+    "image": "images/courses/design.jpg"
+  },
+  "react": {
+    "title": "Web Development with React",
+    "instructor": "Jon Doe",
+    "tagline": "Modern frontend with React",
+    "description": "Learn React from fundamentals to hooks and routing.",
+    "image": "images/courses/react-large.png"
+  }
+}

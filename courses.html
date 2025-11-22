@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="courses.title">Courses Catalog</title>
+</head>
+
+<body>
+
+<header>
+    <nav aria-label="Main navigation">
+        <a href="index.html" class="logo" data-i18n="nav.logo">IT Courses</a>
+
+        <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="courses.html" data-i18n="nav.courses">Courses</a></li>
+            <li><a href="enrollment.html" data-i18n="nav.enrollment">Enrollment</a></li>
+        </ul>
+
+        <a href="#" class="btn-signin" aria-label="Sign in" data-i18n="nav.signin">Sign in</a>
+    </nav>
+</header>
+
+<main>
+
+    <section aria-labelledby="catalog-title">
+        <h1 id="catalog-title" data-i18n="courses.heading">Courses Catalog</h1>
+
+        <!-- Search -->
+        <form role="search" aria-label="Search courses">
+            <label for="search-input" class="visually-hidden" data-i18n="courses.searchLabel">
+                Search for a course
+            </label>
+
+            <input
+                    id="search-input"
+                    type="search"
+                    placeholder="Search..."
+                    data-i18n-placeholder="courses.searchPlaceholder">
+
+            <button type="submit" data-i18n="courses.searchBtn">Search</button>
+        </form>
+
+        <!-- Courses Grid -->
+        <section aria-label="Available courses">
+
+            <!-- Course Card 1 -->
+            <article itemscope itemtype="https://schema.org/Course">
+                <a href="course.html?id=python" aria-label="View Python for Beginners course">
+
+                    <picture>
+                        <source srcset="images/courses/python-large.jpg" media="(max-width: 768px)">
+                        <img src="images/courses/python-small.png"
+                             alt="Python course cover"
+                             itemprop="image">
+                    </picture>
+
+                    <div>
+                        <h2 itemprop="name" data-i18n="courses.python.title">
+                            Python for Beginners
+                        </h2>
+
+                        <p>
+                            <span data-i18n="courses.instructor">Instructor:</span>
+                            <span itemprop="provider" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name" data-i18n="courses.python.instructor">Jhon Doe</span>
+                            </span>
+                        </p>
+                    </div>
+
+                </a>
+            </article>
+
+            <!-- Course Card 2 -->
+            <article itemscope itemtype="https://schema.org/Course">
+                <a href="course.html?id=react" aria-label="View Web Development with React course">
+
+                    <picture>
+                        <source srcset="images/courses/react-large.png" media="(min-width: 768px)">
+                        <img src="images/courses/react-small.png"
+                             alt="React web development course cover"
+                             itemprop="image">
+                    </picture>
+
+                    <div>
+                        <h2 itemprop="name" data-i18n="courses.react.title">
+                            Web Development with React
+                        </h2>
+
+                        <p>
+                            <span data-i18n="courses.instructor">Instructor:</span>
+                            <span itemprop="provider" itemscope itemtype="https://schema.org/Person">
+                                <span itemprop="name" data-i18n="courses.react.instructor">Jane Smith</span>
+                            </span>
+                        </p>
+                    </div>
+
+                </a>
+            </article>
+
+        </section>
+
+    </section>
+
+</main>
+
+<footer>
+    <p data-i18n="footer.copy">© 2025 IT Courses. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

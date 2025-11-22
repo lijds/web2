@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course</title>
+</head>
+<body>
+
+<h1 id="title"></h1>
+<p id="instructor"></p>
+<h3 id="tagline"></h3>
+<img id="image" style="max-width:300px; display:block;">
+<p id="description"></p>
+
+
+<script>
+    async function loadCourse() {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+
+        // 1. Завантажуємо JSON з курсами
+        const res = await fetch("courses.json");
+        const courses = await res.json();
+
+        // 2. Отримуємо конкретний курс
+        const course = courses[id];
+
+        if (!course) {
+            document.body.innerHTML = "<h2>Course not found</h2>";
+            return;
+        }
+
+        // 3. Вставляємо дані в HTML
+        document.getElementById("title").textContent = course.title;
+        document.getElementById("instructor").textContent = course.instructor;
+        document.getElementById("tagline").textContent = course.tagline;
+        document.getElementById("description").textContent = course.description;
+        document.getElementById("image").src = course.image;
+
+    }
+
+    loadCourse();
+</script>
+
+</body>
+</html>
